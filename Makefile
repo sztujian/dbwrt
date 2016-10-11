@@ -2,7 +2,7 @@ VERSION = 3
 PATCHLEVEL = 14
 SUBLEVEL = 43
 EXTRAVERSION =
-NAME = Remembering Coco
+NAME = Ambitious George
 
 # *DOCUMENTATION*
 # To see a list of typical targets execute "make help"
