@@ -517,7 +517,7 @@ config SRAM
 
 config QSEECOM
 	tristate "QSEECOM Client Driver"
-	default m
+	default n
 	---help---
 	  This is client test driver that demonstrates a communication interface
 	  between userspace and Qualcomm Secure Execution Environment (QSEE)

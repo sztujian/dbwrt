@@ -30,9 +30,12 @@ static DEFINE_MUTEX(rpm_clk_lock);
 static int clk_rpm_set_active_rate(struct rpm_clk *r, u32 value)
 {
 	int ret = 0;
+//HLAB
+#if 0
 	ret = qcom_rpm_write(r->rpm, QCOM_RPM_ACTIVE_STATE,
 				r->rpm_clk_id, &value, 1);
 
+#endif
 	/* Upon success save newly set rate in Hz*/
 	if (ret == 0 && !r->branch)
 		r->rate = value * 1000;
@@ -42,8 +45,13 @@ static int clk_rpm_set_active_rate(struct rpm_clk *r, u32 value)
 
 static int clk_rpm_set_sleep_rate(struct rpm_clk *r, u32 value)
 {
+//HLAB
+#if 0
 	return qcom_rpm_write(r->rpm, QCOM_RPM_SLEEP_STATE,
 				r->rpm_clk_id, &value, 1);
+#endif
+	return 0;
+
 }
 
 static void to_active_sleep_khz(struct rpm_clk *r, u32 rate,
